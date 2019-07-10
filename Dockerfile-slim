@@ -15,15 +15,6 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/so
     && apt-get update \
     && apt-get install -qy google-chrome-stable
 
-# RUN apt-get install -qy apt-transport-https \
-#     && echo "deb https://deb.opera.com/opera-stable/ stable non-free" >> /etc/apt/sources.list \
-#     && curl -fsSL https://deb.opera.com/archive.key | apt-key add - \
-#     && apt-get update \
-#     && DEBIAN_FRONTEND=noninteractive apt-get install -y opera-stable
-
-# RUN apt-get install -qy dbus-x11 \
-#     && update-rc.d dbus enable
-
 WORKDIR /tmp/
 
 RUN pip3 install --upgrade pip setuptools
